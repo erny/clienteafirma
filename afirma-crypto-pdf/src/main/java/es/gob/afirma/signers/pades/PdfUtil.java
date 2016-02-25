@@ -12,17 +12,17 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import com.lowagie.text.exceptions.BadPasswordException;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDeveloperExtension;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfSignatureAppearance;
-import com.lowagie.text.pdf.PdfStamper;
-import com.lowagie.text.pdf.PdfString;
-import com.lowagie.text.pdf.PdfWriter;
+import com.aowagie.text.exceptions.BadPasswordException;
+import com.aowagie.text.pdf.PdfArray;
+import com.aowagie.text.pdf.PdfDeveloperExtension;
+import com.aowagie.text.pdf.PdfDictionary;
+import com.aowagie.text.pdf.PdfName;
+import com.aowagie.text.pdf.PdfObject;
+import com.aowagie.text.pdf.PdfReader;
+import com.aowagie.text.pdf.PdfSignatureAppearance;
+import com.aowagie.text.pdf.PdfStamper;
+import com.aowagie.text.pdf.PdfString;
+import com.aowagie.text.pdf.PdfWriter;
 
 import es.gob.afirma.core.AOCancelledOperationException;
 import es.gob.afirma.core.ui.AOUIFactory;

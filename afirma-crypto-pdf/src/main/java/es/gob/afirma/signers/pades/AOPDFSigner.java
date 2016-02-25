@@ -22,11 +22,11 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.exceptions.BadPasswordException;
-import com.lowagie.text.pdf.AcroFields;
-import com.lowagie.text.pdf.PdfPKCS7;
-import com.lowagie.text.pdf.PdfReader;
+import com.aowagie.text.DocumentException;
+import com.aowagie.text.exceptions.BadPasswordException;
+import com.aowagie.text.pdf.AcroFields;
+import com.aowagie.text.pdf.PdfPKCS7;
+import com.aowagie.text.pdf.PdfReader;
 
 import es.gob.afirma.core.AOCancelledOperationException;
 import es.gob.afirma.core.AOException;
@@ -398,7 +398,7 @@ public final class AOPDFSigner implements AOSigner {
     			// Extraemos el PKCS1 de la firma
     			try {
     				// iText antiguo
-    				final Field digestField = Class.forName("com.lowagie.text.pdf.PdfPKCS7").getDeclaredField("digest"); //$NON-NLS-1$ //$NON-NLS-2$
+    				final Field digestField = Class.forName("com.aowagie.text.pdf.PdfPKCS7").getDeclaredField("digest"); //$NON-NLS-1$ //$NON-NLS-2$
     				digestField.setAccessible(true);
     				pkcs1Object = digestField.get(pcks7);
     			}

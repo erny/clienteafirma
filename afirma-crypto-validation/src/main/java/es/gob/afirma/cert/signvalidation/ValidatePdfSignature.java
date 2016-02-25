@@ -7,9 +7,9 @@ import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.lowagie.text.pdf.AcroFields;
-import com.lowagie.text.pdf.PdfPKCS7;
-import com.lowagie.text.pdf.PdfReader;
+import com.aowagie.text.pdf.AcroFields;
+import com.aowagie.text.pdf.PdfPKCS7;
+import com.aowagie.text.pdf.PdfReader;
 
 import es.gob.afirma.cert.signvalidation.SignValidity.SIGN_DETAIL_TYPE;
 import es.gob.afirma.cert.signvalidation.SignValidity.VALIDITY_ERROR;

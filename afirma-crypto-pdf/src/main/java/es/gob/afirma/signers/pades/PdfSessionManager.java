@@ -19,18 +19,18 @@ import java.util.HashMap;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Image;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.exceptions.BadPasswordException;
-import com.lowagie.text.pdf.PdfDate;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfObject;
-import com.lowagie.text.pdf.PdfPKCS7;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfSignature;
-import com.lowagie.text.pdf.PdfSignatureAppearance;
-import com.lowagie.text.pdf.PdfStamper;
+import com.aowagie.text.DocumentException;
+import com.aowagie.text.Image;
+import com.aowagie.text.Rectangle;
+import com.aowagie.text.exceptions.BadPasswordException;
+import com.aowagie.text.pdf.PdfDate;
+import com.aowagie.text.pdf.PdfName;
+import com.aowagie.text.pdf.PdfObject;
+import com.aowagie.text.pdf.PdfPKCS7;
+import com.aowagie.text.pdf.PdfReader;
+import com.aowagie.text.pdf.PdfSignature;
+import com.aowagie.text.pdf.PdfSignatureAppearance;
+import com.aowagie.text.pdf.PdfStamper;
 
 import es.gob.afirma.core.AOCancelledOperationException;
 import es.gob.afirma.core.AOException;
@@ -423,7 +423,7 @@ public final class PdfSessionManager {
 
 		sap.preClose(exc, signTime);
 
-		final PdfObject pdfObject = ((com.lowagie.text.pdf.PdfStamperImp) stp.getWriter()).getFileID();
+		final PdfObject pdfObject = ((com.aowagie.text.pdf.PdfStamperImp) stp.getWriter()).getFileID();
 
 		return new PdfTriPhaseSession(sap, baos, new String(pdfObject.getBytes()));
     }

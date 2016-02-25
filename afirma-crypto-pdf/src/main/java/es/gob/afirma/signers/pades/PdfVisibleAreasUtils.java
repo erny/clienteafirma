@@ -43,7 +43,7 @@ final class PdfVisibleAreasUtils {
 		// No instanciable
 	}
 
-	static com.lowagie.text.Font getFont(final int fontFamily,
+	static com.aowagie.text.Font getFont(final int fontFamily,
 			                             final int fontSize,
 			                             final int fontStyle,
 			                             final String fontColor) {
@@ -70,7 +70,7 @@ final class PdfVisibleAreasUtils {
 				Integer.valueOf(cv.getB())
 			);
 
-			return com.lowagie.text.Font.class.getConstructor(
+			return com.aowagie.text.Font.class.getConstructor(
 				Integer.TYPE,
 				Float.TYPE,
 				Integer.TYPE,
@@ -83,13 +83,13 @@ final class PdfVisibleAreasUtils {
 				Float.valueOf(fontSize == UNDEFINED ? DEFAULT_LAYER_2_FONT_SIZE : fontSize),
 				// Style (NORMAL = 0, BOLD = 1, ITALIC = 2,
 				// BOLDITALIC = 3, UNDERLINE = 4, STRIKETHRU = 8)
-				Integer.valueOf(fontStyle == UNDEFINED ? com.lowagie.text.Font.NORMAL : fontStyle),
+				Integer.valueOf(fontStyle == UNDEFINED ? com.aowagie.text.Font.NORMAL : fontStyle),
 				// Color
 				color
 			);
 		}
 		catch (final Exception e) {
-			return new com.lowagie.text.Font(
+			return new com.aowagie.text.Font(
 				// Family (COURIER = 0, HELVETICA = 1, TIMES_ROMAN = 2, SYMBOL = 3,
 				// ZAPFDINGBATS = 4)
 				fontFamily == UNDEFINED ? COURIER : fontFamily,
@@ -97,7 +97,7 @@ final class PdfVisibleAreasUtils {
 				fontSize == UNDEFINED ? DEFAULT_LAYER_2_FONT_SIZE : fontSize,
 				// Style (NORMAL = 0, BOLD = 1, ITALIC = 2, BOLDITALIC = 3,
 				// UNDERLINE = 4, STRIKETHRU = 8)
-				fontStyle == UNDEFINED ? com.lowagie.text.Font.NORMAL : fontStyle,
+				fontStyle == UNDEFINED ? com.aowagie.text.Font.NORMAL : fontStyle,
 				// Color
 				null
 			);
